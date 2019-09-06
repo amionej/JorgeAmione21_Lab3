@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar{
+  background-color: grey;
+}
+.hamburger{
+  display:flex;
+  justify-content: flex-end;
+  color: white;
+  margin-bottom: 10px;
+  height: 22px;
+  align-items: center;
+}
+
+.menu{
+  display: none;
+}
+
+.product {
+  margin: 5px 1.5em 0px 1.5em;
+  padding: 5px;
+  display: flex;
+  border: solid lightgrey;
+  border-width: thin;
+  border-radius: 5px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social{
+  display: flex;
+  border-top: solid lightgrey;
+  border-width: thin;
+  padding: 5px;
+  justify-content: space-around;
+  list-style: none;
+}
+
+/*Tablets*/
+@media (min-width: 600px) and (max-width: 990px) {
+  
+  header{
+    flex-direction: row;
+  }
+  img{
+    margin-left: 6em;
+  }
+  h1{
+    margin-left: 3em;
+  }
+}
+
+/*Large Screens*/
+@media (min-width: 991px){
+  header{
+    flex-direction: row;
+  }
+  img{
+    margin-left: 15em;
+  }
+  h1{
+    margin-left: 6em;
+  }
+  main {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .product{
+    width: 30%;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu li {
+    margin: 20px;
+  }
+  .hamburger{
+    display:none;
+  }
+}
